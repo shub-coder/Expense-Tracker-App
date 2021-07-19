@@ -1,8 +1,9 @@
 import React from 'react';
 
-import Expenses from './Components/Expenses/Expenses';//Expenses.js is imported
+import NewExpense from './Components/NewExpense/NewExpense';
+import Expenses from './Components/Expenses/Expenses';
 
-const App = () => {                //This is the file where execution starts. it contains all the content
+const App = () => {
   const expenses = [
     {
       id: 'e1',
@@ -25,17 +26,21 @@ const App = () => {                //This is the file where execution starts. it
     },
   ];
 
+  const addExpenseHandler = expense => {
+    console.log('In App.js');
+    console.log(expense);
+  };
+
   // return React.createElement(
   //   'div',
   //   {},
   //   React.createElement('h2', {}, "Let's get started!"),
   //   React.createElement(Expenses, { items: expenses })
   // );
-  
-  //In {expenses} function, expenses is executed which is written above
+
   return (
     <div>
-      <h2>Let's get started!</h2> 
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   );
