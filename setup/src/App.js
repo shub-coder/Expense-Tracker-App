@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Expenses from './Components/Expenses/Expenses';
+import Expenses from './Components/Expenses/Expenses';//Expenses.js is imported
 
-const App = () => {
+const App = () => {                //This is the file where execution starts. it contains all the content
   const expenses = [
     {
       id: 'e1',
@@ -31,10 +31,11 @@ const App = () => {
   //   React.createElement('h2', {}, "Let's get started!"),
   //   React.createElement(Expenses, { items: expenses })
   // );
-
+  
+  //In {expenses} function, expenses is executed which is written above
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <h2>Let's get started!</h2> 
       <Expenses items={expenses} />
     </div>
   );

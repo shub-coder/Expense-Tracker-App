@@ -1,10 +1,10 @@
 import React from 'react';
 
-import ExpenseItem from './ExpenseItem';
+import ExpenseItem from './ExpenseItem';//Everything from expense item is imported
 import Card from '../UI/Card';
 import './Expenses.css';
 
-const Expenses = (props) => {
+const Expenses = (props) => {//props means properties. All the contents written in App.js is transfered to this expenses component
   return (
     <Card className="expenses">
       <ExpenseItem
